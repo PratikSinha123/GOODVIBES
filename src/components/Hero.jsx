@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowDown } from 'lucide-react';
 
 export default function Hero() {
+  const [showScroll, setShowScroll] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setShowScroll(false);
+      } else {
+        setShowScroll(true);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleScrollToContact = (e) => {
     e.preventDefault();
     const contactSection = document.querySelector('#contact');
@@ -66,7 +80,9 @@ export default function Hero() {
         onClick={() => {
           document.querySelector('#amenities')?.scrollIntoView({ behavior: 'smooth' });
         }}
-        className="absolute bottom-28 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-cream-bg/60 hover:text-gold-accent transition-colors duration-300 cursor-pointer animate-bounce"
+        className={`absolute bottom-20 sm:bottom-28 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-cream-bg/60 hover:text-gold-accent transition-all duration-500 cursor-pointer animate-bounce ${
+          showScroll ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
       >
         <span className="font-sans text-xs uppercase tracking-widest font-semibold">Scroll Down</span>
         <ArrowDown size={18} />

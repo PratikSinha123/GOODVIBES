@@ -26,7 +26,7 @@ export default function HighlightsStrip() {
   ];
 
   return (
-    <section className="relative z-20 -mt-16 max-w-6xl mx-auto px-4">
+    <section className="relative z-20 -mt-8 sm:-mt-16 max-w-6xl mx-auto px-4">
       <div className="bg-emerald-primary/75 backdrop-blur-xl border border-gold-accent/30 rounded-3xl shadow-2xl p-8 md:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
         {highlights.map((item, idx) => {
           const IconComponent = item.icon;
