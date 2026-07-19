@@ -29,10 +29,17 @@ export default function Footer() {
               e.preventDefault();
               document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="font-display font-extrabold text-2xl text-cream-bg tracking-wide flex flex-col leading-none"
+            className="flex items-center gap-3 group"
           >
-            <span>GOOD VIBES</span>
-            <span className="text-gold-accent text-xs font-semibold tracking-[0.12em] mt-1">HOSTEL & RESIDENCY</span>
+            <img 
+              src="/images/logo.png" 
+              alt="Good Vibes Hostel & Residency Logo" 
+              className="h-12 w-12 rounded-xl border border-gold-accent/20 group-hover:scale-105 transition-transform duration-300 shadow-sm"
+            />
+            <div className="font-display font-extrabold text-xl text-cream-bg tracking-wide flex flex-col leading-none">
+              <span>GOOD VIBES</span>
+              <span className="text-gold-accent text-xs font-semibold tracking-[0.12em] mt-1">HOSTEL & RESIDENCY</span>
+            </div>
           </a>
           <p className="font-sans text-sm text-cream-bg/70 leading-relaxed max-w-sm">
             Premium boutique student-living brand offering modern furnished accommodation for boys & girls near UPES Bidholi Campus.

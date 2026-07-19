@@ -32,10 +32,17 @@ export default function Navbar() {
             <a 
               href="#home" 
               onClick={(e) => handleLinkClick(e, '#home')}
-              className="font-display font-extrabold text-xl sm:text-2xl text-cream-bg tracking-wide flex flex-col leading-none"
+              className="flex items-center gap-3 group"
             >
-              <span>GOOD VIBES</span>
-              <span className="text-gold-accent text-xs font-semibold tracking-[0.12em] mt-1">HOSTEL & RESIDENCY</span>
+              <img 
+                src="/images/logo.png" 
+                alt="Good Vibes Hostel & Residency Logo" 
+                className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl border border-gold-accent/20 group-hover:scale-105 transition-transform duration-300 shadow-sm"
+              />
+              <div className="font-display font-extrabold text-lg sm:text-xl text-cream-bg tracking-wide flex flex-col leading-none">
+                <span>GOOD VIBES</span>
+                <span className="text-gold-accent text-[9px] sm:text-[11px] font-semibold tracking-[0.12em] mt-1">HOSTEL & RESIDENCY</span>
+              </div>
             </a>
           </div>
 
@@ -96,9 +103,16 @@ export default function Navbar() {
         >
           <div>
             <div className="flex items-center justify-between mb-8">
-              <div className="flex flex-col leading-none">
-                <span className="font-display font-extrabold text-lg text-cream-bg">GOOD VIBES</span>
-                <span className="text-gold-accent text-[10px] font-semibold tracking-[0.1em] mt-1">HOSTEL & RESIDENCY</span>
+              <div className="flex items-center gap-2.5">
+                <img 
+                  src="/images/logo.png" 
+                  alt="Good Vibes Logo" 
+                  className="h-9 w-9 rounded-lg border border-gold-accent/20"
+                />
+                <div className="flex flex-col leading-none">
+                  <span className="font-display font-extrabold text-base text-cream-bg">GOOD VIBES</span>
+                  <span className="text-gold-accent text-[9px] font-semibold tracking-[0.1em] mt-1">HOSTEL & RESIDENCY</span>
+                </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
