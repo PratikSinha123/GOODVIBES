@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-primary: #0d3b36;
+  --color-gold-accent: #f0a500;
+  --color-gold-accent-hover: #d18f00;
+  --color-cream-bg: #f7f4ee;
+  
+  --font-display: "Sora", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f7f4ee;
+  font-family: "Inter", sans-serif;
+  color: #1a2a27;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbar for premium look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f7f4ee;
+}
+::-webkit-scrollbar-thumb {
+  background: #0d3b36;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #092a26;
+}
+
+/* Custom Glassmorphism styles */
+.glass-nav {
+  background: rgba(13, 59, 54, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(240, 165, 0, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Scroll reveal animations styling */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
