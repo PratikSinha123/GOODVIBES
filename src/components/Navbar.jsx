@@ -4,13 +4,16 @@ import useScrollSpy from '../hooks/useScrollSpy';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const activeSection = useScrollSpy(['home', 'amenities', 'gallery', 'location', 'contact']);
+  const activeSection = useScrollSpy(['home', 'amenities', 'gallery', 'reviews', 'guides', 'location', 'faq', 'contact']);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Amenities', href: '#amenities' },
     { name: 'Gallery', href: '#gallery' },
+    { name: 'Reviews', href: '#reviews' },
+    { name: 'Guides', href: '#guides' },
     { name: 'Location', href: '#location' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
 

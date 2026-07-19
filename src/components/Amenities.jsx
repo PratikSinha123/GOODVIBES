@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   BedDouble, 
   ChefHat, 
   Shield, 
   Sparkles, 
-  Check 
+  Check,
+  ChevronDown,
+  ChevronUp,
+  Bus
 } from 'lucide-react';
 import useAnimateOnScroll from '../hooks/useAnimateOnScroll';
 
 export default function Amenities() {
   const sectionRef = useAnimateOnScroll();
+  const [showSchedule, setShowSchedule] = useState(false);
 
   const categorizedAmenities = [
     {
@@ -28,7 +32,8 @@ export default function Amenities() {
       items: [
         'Catering services by experienced in-house cooks',
         'Kitchen with RO, fridge & induction on every floor',
-        'Hygienic and healthy daily student meals'
+        'Hygienic and healthy daily student meals (FSSAI standard)',
+        'Healthy diet & sick care (Khichdi, oats & light food on request)'
       ]
     },
     {
@@ -38,7 +43,7 @@ export default function Amenities() {
         '24x7 power backup & high-speed Wi-Fi',
         '24x7 hot & cold water storage capacity',
         'Laundry services & washing machine access',
-        'Resident Supervisor for on-site support'
+        'Resident Supervisor & biometric gate entry system'
       ]
     },
     {
@@ -48,7 +53,7 @@ export default function Amenities() {
         'Professional pool table — 15% off @ Food Vibes',
         'Recreational space for birthday celebrations',
         'On-call doctor & medical emergency support',
-        'In-house student transport facilities'
+        'Free bus shuttle service to UPES campuses'
       ]
     }
   ];
@@ -104,6 +109,76 @@ export default function Amenities() {
               </div>
             );
           })}
+        </div>
+
+        {/* Shuttle Bus Schedule Accordion */}
+        <div className="mt-12 max-w-3xl mx-auto">
+          <button
+            onClick={() => setShowSchedule(!showSchedule)}
+            className="w-full flex items-center justify-between bg-white/5 border border-gold-accent/15 rounded-2xl p-5 hover:border-gold-accent/40 hover:bg-white/10 transition-all duration-300 group text-left"
+          >
+            <div className="flex items-center gap-3 text-gold-accent">
+              <Bus size={22} className="group-hover:scale-110 transition-transform duration-300" />
+              <span className="font-display font-bold text-base sm:text-lg tracking-wide">
+                View Free Campus Shuttle Timings
+              </span>
+            </div>
+            <div className="text-gold-accent">
+              {showSchedule ? <ChevronUp size={22} /> : <ChevronDown size={22} />}
+            </div>
+          </button>
+
+          {showSchedule && (
+            <div className="mt-4 bg-white/5 border border-gold-accent/15 rounded-2xl p-6 sm:p-8 transition-all duration-300">
+              <p className="font-sans text-xs sm:text-sm text-cream-bg/75 mb-6 leading-relaxed">
+                We provide a dedicated free shuttle service for our residents to make sure you never miss a lecture or lab. Multiple daily runs directly to both Bidholi and Kandoli campuses.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {/* To Campus */}
+                <div className="bg-emerald-primary/45 border border-gold-accent/10 rounded-xl p-4 sm:p-5">
+                  <h4 className="font-display font-bold text-sm text-gold-accent uppercase tracking-wider mb-3">
+                    Hostel &rarr; UPES Campus
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {['7:30 AM', '8:00 AM', '8:30 AM', '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:45 AM'].map((time) => (
+                      <span key={time} className="bg-white/5 border border-gold-accent/10 px-2.5 py-1 rounded text-xs text-cream-bg font-semibold font-sans">
+                        {time}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* From Campus */}
+                <div className="bg-emerald-primary/45 border border-gold-accent/10 rounded-xl p-4 sm:p-5">
+                  <h4 className="font-display font-bold text-sm text-gold-accent uppercase tracking-wider mb-3">
+                    UPES Campus &rarr; Hostel
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {['1:15 PM', '2:15 PM', '3:15 PM', '4:15 PM', '5:15 PM', '5:45 PM'].map((time) => (
+                      <span key={time} className="bg-white/5 border border-gold-accent/10 px-2.5 py-1 rounded text-xs text-cream-bg font-semibold font-sans">
+                        {time}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Prem Nagar */}
+              <div className="mt-6 bg-gold-accent/10 border border-gold-accent/20 rounded-xl p-4 flex items-center justify-between gap-4 flex-wrap">
+                <div>
+                  <h4 className="font-display font-bold text-sm text-gold-accent uppercase tracking-wider mb-1">
+                    Evening City Run (Prem Nagar)
+                  </h4>
+                  <p className="font-sans text-xs text-cream-bg/70">
+                    Daily shuttle for shopping, dining, and weekend outings.
+                  </p>
+                </div>
+                <span className="bg-gold-accent text-emerald-primary px-3 py-1.5 rounded-lg text-xs font-bold font-sans">
+                  6:45 PM Daily
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
