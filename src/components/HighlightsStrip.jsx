@@ -27,13 +27,13 @@ export default function HighlightsStrip() {
 
   return (
     <section className="relative z-20 -mt-16 max-w-6xl mx-auto px-4">
-      <div className="bg-emerald-primary border border-gold-accent/20 rounded-3xl shadow-xl p-8 md:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
+      <div className="bg-emerald-primary/75 backdrop-blur-xl border border-gold-accent/30 rounded-3xl shadow-2xl p-8 md:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
         {highlights.map((item, idx) => {
           const IconComponent = item.icon;
           return (
             <div 
               key={idx} 
-              className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left p-4 rounded-2xl hover:bg-white/5 transition-all duration-300 group"
+              className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left p-4 rounded-2xl hover:bg-white/5 hover:scale-[1.03] hover:shadow-lg border border-transparent hover:border-gold-accent/10 transition-all duration-300 group cursor-pointer"
             >
               {/* Circular Icon Badge */}
               <div className="w-16 h-16 rounded-full bg-gold-accent/10 border border-gold-accent/30 flex items-center justify-center text-gold-accent group-hover:bg-gold-accent group-hover:text-emerald-primary transition-all duration-500 shadow-md shrink-0">
