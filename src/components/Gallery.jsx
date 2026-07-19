@@ -12,15 +12,22 @@ export default function Gallery() {
     { id: 'bedrooms', name: 'Bedrooms' },
     { id: 'kitchen', name: 'Kitchen' },
     { id: 'common lounge', name: 'Common Lounge' },
-    { id: 'pool table room', name: 'Pool Table Room' }
+    { id: 'pool table room', name: 'Pool Table Room' },
+    { id: 'washrooms', name: 'Washrooms' }
   ];
 
   const galleryItems = [
     {
       src: '/images/bedroom.png',
       category: 'bedrooms',
-      title: 'Premium Twin Sharing Room',
-      desc: 'Spacious well-ventilated rooms with dedicated study setups.'
+      title: 'Premium Twin Sharing Room (A)',
+      desc: 'Spacious well-ventilated rooms with dedicated study setups and warm lighting.'
+    },
+    {
+      src: '/images/bedroom_2.png',
+      category: 'bedrooms',
+      title: 'Premium Twin Sharing Room (B)',
+      desc: 'Comfortable layouts with marble finishes, dark stone styling and premium fittings.'
     },
     {
       src: '/images/kitchen.png',
@@ -31,14 +38,26 @@ export default function Gallery() {
     {
       src: '/images/lounge.png',
       category: 'common lounge',
-      title: 'Luxury Common Lounge',
-      desc: 'A vibrant social area with comfortable seating and LED TV at every floor.'
+      title: 'Luxury Common Lounge (A)',
+      desc: 'Vibrant social area with premium modular teal sofas and ambient lighting.'
+    },
+    {
+      src: '/images/lounge_2.png',
+      category: 'common lounge',
+      title: 'Luxury Common Lounge (B)',
+      desc: 'Clean, open-plan recreational lounge with direct access to natural lighting.'
     },
     {
       src: '/images/pool_room.png',
       category: 'pool table room',
       title: 'Recreation & Play Area',
       desc: 'Professional pool table and lounge area for recreation.'
+    },
+    {
+      src: '/images/bathroom.png',
+      category: 'washrooms',
+      title: 'Attached Luxury Washroom',
+      desc: 'Stunning marble-tiled walls, high-end sanitaryware, and premium geyser fittings.'
     }
   ];
 
