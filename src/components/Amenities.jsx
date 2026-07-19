@@ -1,44 +1,56 @@
 import React from 'react';
 import { 
   BedDouble, 
-  Flame, 
-  Sparkles, 
-  Bus, 
-  Shirt, 
-  Zap, 
-  Droplets, 
-  RotateCw, 
-  Wifi, 
-  Shield, 
   ChefHat, 
-  HeartPulse, 
-  Car, 
-  Cake, 
-  Percent, 
-  Tv 
+  Shield, 
+  Sparkles, 
+  Check 
 } from 'lucide-react';
 import useAnimateOnScroll from '../hooks/useAnimateOnScroll';
 
 export default function Amenities() {
   const sectionRef = useAnimateOnScroll();
 
-  const amenitiesList = [
-    { icon: BedDouble, text: 'AC & Non-AC rooms well furnished' },
-    { icon: Flame, text: 'Kitchen with RO, fridge & induction at every floor' },
-    { icon: Sparkles, text: 'Spacious rooms with excellent housekeeping' },
-    { icon: Bus, text: 'Transport facilities' },
-    { icon: Shirt, text: 'Laundry services' },
-    { icon: Zap, text: '24x7 power backup' },
-    { icon: Droplets, text: '24x7 hot & cold water storage' },
-    { icon: RotateCw, text: 'Washing machine access' },
-    { icon: Wifi, text: '24x7 high speed Wi-Fi' },
-    { icon: Shield, text: 'Resident Supervisor' },
-    { icon: ChefHat, text: 'Catering by an experienced cook' },
-    { icon: HeartPulse, text: 'Doctor on call' },
-    { icon: Car, text: 'Dedicated parking space' },
-    { icon: Cake, text: 'Space available for birthday celebration' },
-    { icon: Percent, text: 'Pool table — 15% off @ Food Vibes' },
-    { icon: Tv, text: 'Rest area with sofa & LED at every floor' }
+  const categorizedAmenities = [
+    {
+      category: 'Room & Living Comfort',
+      icon: BedDouble,
+      items: [
+        'AC & Non-AC well-furnished spacious rooms',
+        'Excellent daily room housekeeping services',
+        'Rest areas with sofa & LED on every floor',
+        'Dedicated secure parking spaces'
+      ]
+    },
+    {
+      category: 'Dining & Kitchen',
+      icon: ChefHat,
+      items: [
+        'Catering services by experienced in-house cooks',
+        'Kitchen with RO, fridge & induction on every floor',
+        'Hygienic and healthy daily student meals'
+      ]
+    },
+    {
+      category: 'Utilities & Security',
+      icon: Shield,
+      items: [
+        '24x7 power backup & high-speed Wi-Fi',
+        '24x7 hot & cold water storage capacity',
+        'Laundry services & washing machine access',
+        'Resident Supervisor for on-site support'
+      ]
+    },
+    {
+      category: 'Recreation & Services',
+      icon: Sparkles,
+      items: [
+        'Professional pool table — 15% off @ Food Vibes',
+        'Recreational space for birthday celebrations',
+        'On-call doctor & medical emergency support',
+        'In-house student transport facilities'
+      ]
+    }
   ];
 
   return (
@@ -59,23 +71,36 @@ export default function Amenities() {
           <div className="w-24 h-1 bg-gold-accent mx-auto mt-6 rounded-full" />
         </div>
 
-        {/* Two-Column / Grid Checklist */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-          {amenitiesList.map((item, idx) => {
-            const Icon = item.icon;
+        {/* Category Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {categorizedAmenities.map((cat, idx) => {
+            const CategoryIcon = cat.icon;
             return (
               <div 
-                key={idx} 
-                className="flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-gold-accent/10 transition-all duration-300 group"
+                key={idx}
+                className="bg-white/5 border border-gold-accent/15 rounded-3xl p-6 sm:p-8 hover:border-gold-accent/40 transition-all duration-300 hover:shadow-xl group"
               >
-                {/* Icon Container */}
-                <div className="w-10 h-10 rounded-lg bg-gold-accent/15 border border-gold-accent/30 flex items-center justify-center text-gold-accent group-hover:bg-gold-accent group-hover:text-emerald-primary transition-all duration-300 shrink-0">
-                  <Icon size={20} />
+                {/* Card Header */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-gold-accent/10 border border-gold-accent/30 flex items-center justify-center text-gold-accent group-hover:bg-gold-accent group-hover:text-emerald-primary transition-all duration-300 shrink-0">
+                    <CategoryIcon size={24} />
+                  </div>
+                  <h3 className="font-display font-bold text-xl text-gold-accent tracking-wide">
+                    {cat.category}
+                  </h3>
                 </div>
-                {/* Label */}
-                <span className="font-sans font-medium text-sm sm:text-base text-cream-bg/90 group-hover:text-cream-bg transition-colors">
-                  {item.text}
-                </span>
+
+                {/* Items List */}
+                <ul className="space-y-3.5">
+                  {cat.items.map((item, itemIdx) => (
+                    <li key={itemIdx} className="flex items-start gap-3">
+                      <Check size={18} className="text-gold-accent shrink-0 mt-0.5" />
+                      <span className="font-sans text-sm sm:text-base text-cream-bg/90 leading-relaxed">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             );
           })}
