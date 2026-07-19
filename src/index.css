@@ -42,7 +42,7 @@ body {
 
 /* Custom Glassmorphism styles */
 .glass-nav {
-  background: rgba(13, 59, 54, 0.85);
+  background: rgba(13, 59, 54, 0.45);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(240, 165, 0, 0.1);
