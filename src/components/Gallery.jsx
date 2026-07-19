@@ -21,43 +21,50 @@ export default function Gallery() {
       src: '/images/bedroom.png',
       category: 'bedrooms',
       title: 'Premium Twin Sharing Room (A)',
-      desc: 'Spacious well-ventilated rooms with dedicated study setups and warm lighting.'
+      desc: 'Spacious well-ventilated rooms with dedicated study setups and warm lighting.',
+      alt: 'Luxury student PG room near UPES Bidholi Dehradun - Good Vibes Residency'
     },
     {
       src: '/images/bedroom_2.png',
       category: 'bedrooms',
       title: 'Premium Twin Sharing Room (B)',
-      desc: 'Comfortable layouts with marble finishes, dark stone styling and premium fittings.'
+      desc: 'Comfortable layouts with marble finishes, dark stone styling and premium fittings.',
+      alt: 'Spacious boys and girls PG accommodation Bidholi Dehradun - Good Vibes Residency'
     },
     {
       src: '/images/kitchen.png',
       category: 'kitchen',
       title: 'Modern Student Kitchen',
-      desc: 'Equipped with RO water purifier, refrigerator, and induction cooktops.'
+      desc: 'Equipped with RO water purifier, refrigerator, and induction cooktops.',
+      alt: 'Hygienic student kitchen with RO purifier near UPES Bidholi - Good Vibes Residency'
     },
     {
       src: '/images/lounge.png',
       category: 'common lounge',
       title: 'Luxury Common Lounge (A)',
-      desc: 'Vibrant social area with premium modular teal sofas and ambient lighting.'
+      desc: 'Vibrant social area with premium modular teal sofas and ambient lighting.',
+      alt: 'Premium common lounge area in student hostel Bidholi - Good Vibes Residency'
     },
     {
       src: '/images/lounge_2.png',
       category: 'common lounge',
       title: 'Luxury Common Lounge (B)',
-      desc: 'Clean, open-plan recreational lounge with direct access to natural lighting.'
+      desc: 'Clean, open-plan recreational lounge with direct access to natural lighting.',
+      alt: 'Common study and recreational area in Dehradun hostel - Good Vibes Residency'
     },
     {
       src: '/images/pool_room.png',
       category: 'pool table room',
       title: 'Recreation & Play Area',
-      desc: 'Professional pool table and lounge area for recreation.'
+      desc: 'Professional pool table and lounge area for recreation.',
+      alt: 'Student recreation pool table room near UPES campus - Good Vibes Residency'
     },
     {
       src: '/images/bathroom.png',
       category: 'washrooms',
       title: 'Attached Luxury Washroom',
-      desc: 'Stunning marble-tiled walls, high-end sanitaryware, and premium geyser fittings.'
+      desc: 'Stunning marble-tiled walls, high-end sanitaryware, and premium geyser fittings.',
+      alt: 'Attached luxury bathroom in student PG room Bidholi - Good Vibes Residency'
     }
   ];
 
@@ -131,7 +138,7 @@ export default function Gallery() {
               <div className="aspect-[4/3] w-full overflow-hidden bg-emerald-primary/20">
                 <img
                   src={item.src}
-                  alt={item.title}
+                  alt={item.alt || item.title}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
@@ -188,7 +195,7 @@ export default function Gallery() {
           >
             <img
               src={filteredItems[lightboxIndex].src}
-              alt={filteredItems[lightboxIndex].title}
+              alt={filteredItems[lightboxIndex].alt || filteredItems[lightboxIndex].title}
               className="max-h-[75vh] w-auto max-w-full object-contain rounded-xl shadow-2xl border border-white/5"
             />
             <div className="text-center mt-6 max-w-2xl">
