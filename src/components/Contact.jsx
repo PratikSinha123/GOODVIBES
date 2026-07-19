@@ -161,7 +161,7 @@ export default function Contact() {
                   Enquiry Submitted!
                 </h3>
                 <p className="font-sans text-emerald-primary/75 max-w-md mb-8">
-                  Thank you for your interest in Good Vibes Residency. Our team will reach out to you on your phone number shortly to confirm availability.
+                  Thank you for your interest in Good Vibes Hostel & Residency. Our team will reach out to you on your phone number shortly to confirm availability.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}

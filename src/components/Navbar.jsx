@@ -35,7 +35,7 @@ export default function Navbar() {
               className="font-display font-extrabold text-xl sm:text-2xl text-cream-bg tracking-wide flex flex-col leading-none"
             >
               <span>GOOD VIBES</span>
-              <span className="text-gold-accent text-xs font-semibold tracking-[0.25em] mt-1">RESIDENCY</span>
+              <span className="text-gold-accent text-xs font-semibold tracking-[0.12em] mt-1">HOSTEL & RESIDENCY</span>
             </a>
           </div>
 
@@ -96,7 +96,10 @@ export default function Navbar() {
         >
           <div>
             <div className="flex items-center justify-between mb-8">
-              <span className="font-display font-extrabold text-lg text-cream-bg">GOOD VIBES</span>
+              <div className="flex flex-col leading-none">
+                <span className="font-display font-extrabold text-lg text-cream-bg">GOOD VIBES</span>
+                <span className="text-gold-accent text-[10px] font-semibold tracking-[0.1em] mt-1">HOSTEL & RESIDENCY</span>
+              </div>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-cream-bg hover:text-gold-accent"

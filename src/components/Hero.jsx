@@ -45,7 +45,7 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl text-cream-bg tracking-tight leading-tight mb-4 drop-shadow-md">
-          Good Vibes <span className="text-gold-accent">Residency</span>
+          Good Vibes <span className="text-gold-accent block sm:inline">Hostel & Residency</span>
         </h1>
 
         {/* Subtitle */}

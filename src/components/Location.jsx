@@ -34,7 +34,7 @@ export default function Location() {
               </div>
               
               <p className="font-sans text-base text-cream-bg/95 leading-relaxed mb-6">
-                <strong>Good Vibes Residency</strong><br />
+                <strong>Good Vibes Hostel & Residency</strong><br />
                 32 Bigha, Near UPES Bidholi Campus,<br />
                 Bidholi, Dehradun, Uttarakhand 248007
               </p>

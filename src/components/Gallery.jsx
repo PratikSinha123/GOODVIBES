@@ -104,7 +104,7 @@ export default function Gallery() {
             Residency Tour
           </h2>
           <p className="font-sans text-sm sm:text-base text-emerald-primary/70 max-w-2xl mx-auto">
-            Step inside Good Vibes Residency. See our premium spaces designed for student life.
+            Step inside Good Vibes Hostel & Residency. See our premium spaces designed for student life.
           </p>
           <div className="w-24 h-1 bg-gold-accent mx-auto mt-6 rounded-full" />
         </div>
