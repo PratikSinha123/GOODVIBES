@@ -29,7 +29,7 @@ export default function Hero() {
       {/* Background Image with Dark Emerald Gradient Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-10000 ease-out transform scale-105"
-        style={{ backgroundImage: `url('/images/hero_bg.png')` }}
+        style={{ backgroundImage: `url('/images/building_exterior.png')` }}
       />
       
       {/* Gradient Overlay (emerald to dark transparent) */}

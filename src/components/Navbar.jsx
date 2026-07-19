@@ -64,7 +64,7 @@ export default function Navbar() {
               className="bg-gold-accent hover:bg-gold-accent-hover text-emerald-primary font-sans font-bold px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-2 text-sm shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               <Phone size={16} />
-              <span>Call Support</span>
+              <span>Enquire On Call</span>
             </a>
           </div>
 
@@ -130,7 +130,7 @@ export default function Navbar() {
               className="w-full bg-gold-accent hover:bg-gold-accent-hover text-emerald-primary font-sans font-bold px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
             >
               <Phone size={18} />
-              <span>Call Support</span>
+              <span>Enquire On Call</span>
             </a>
           </div>
         </div>

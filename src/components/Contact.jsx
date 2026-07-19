@@ -114,7 +114,7 @@ export default function Contact() {
                   <Phone size={22} />
                 </div>
                 <div>
-                  <p className="font-sans text-xs text-cream-bg/75 uppercase tracking-wider font-semibold">Call Support</p>
+                  <p className="font-sans text-xs text-cream-bg/75 uppercase tracking-wider font-semibold">Enquire On Call</p>
                   <p className="font-display font-bold text-lg sm:text-xl">+91 84497 55034</p>
                 </div>
               </a>
@@ -127,7 +127,7 @@ export default function Contact() {
                   <Phone size={22} />
                 </div>
                 <div>
-                  <p className="font-sans text-xs text-cream-bg/75 uppercase tracking-wider font-semibold">Call Helpline</p>
+                  <p className="font-sans text-xs text-cream-bg/75 uppercase tracking-wider font-semibold">Enquire On Call</p>
                   <p className="font-display font-bold text-lg sm:text-xl">+91 97190 00113</p>
                 </div>
               </a>
