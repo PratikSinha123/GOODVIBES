@@ -100,7 +100,7 @@ export default function Contact() {
                 Get In Touch
               </h3>
               <p className="font-sans text-sm sm:text-base text-emerald-primary/80 leading-relaxed mb-6">
-                Have questions about pricing, food menus, or availability? Connect with our warden or management directly.
+                Have questions about pricing, food menus, or availability? Connect with our team directly.
               </p>
             </div>
 
@@ -114,7 +114,7 @@ export default function Contact() {
                   <Phone size={22} />
                 </div>
                 <div>
-                  <p className="font-sans text-xs text-cream-bg/75 uppercase tracking-wider font-semibold">Call Warden</p>
+                  <p className="font-sans text-xs text-cream-bg/75 uppercase tracking-wider font-semibold">Call Support</p>
                   <p className="font-display font-bold text-lg sm:text-xl">+91 84497 55034</p>
                 </div>
               </a>
@@ -127,7 +127,7 @@ export default function Contact() {
                   <Phone size={22} />
                 </div>
                 <div>
-                  <p className="font-sans text-xs text-cream-bg/75 uppercase tracking-wider font-semibold">Call Management</p>
+                  <p className="font-sans text-xs text-cream-bg/75 uppercase tracking-wider font-semibold">Call Helpline</p>
                   <p className="font-display font-bold text-lg sm:text-xl">+91 97190 00113</p>
                 </div>
               </a>
@@ -143,9 +143,9 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="text-gold-accent shrink-0" size={20} />
-                <p className="font-sans text-sm text-emerald-primary/80">
+                <a href="mailto:info@goodvibesresidency.com" className="font-sans text-sm text-emerald-primary/80 hover:text-gold-accent transition-colors">
                   info@goodvibesresidency.com
-                </p>
+                </a>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Contact() {
                   Enquiry Submitted!
                 </h3>
                 <p className="font-sans text-emerald-primary/75 max-w-md mb-8">
-                  Thank you for your interest in Good Vibes Residency. Our warden will reach out to you on your phone number shortly to confirm availability.
+                  Thank you for your interest in Good Vibes Residency. Our team will reach out to you on your phone number shortly to confirm availability.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}

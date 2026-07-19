@@ -32,7 +32,7 @@ export default function Amenities() {
     { icon: Droplets, text: '24x7 hot & cold water storage' },
     { icon: RotateCw, text: 'Washing machine access' },
     { icon: Wifi, text: '24x7 high speed Wi-Fi' },
-    { icon: Shield, text: 'Residential warden' },
+    { icon: Shield, text: 'Resident Supervisor' },
     { icon: ChefHat, text: 'Catering by an experienced cook' },
     { icon: HeartPulse, text: 'Doctor on call' },
     { icon: Car, text: 'Dedicated parking space' },

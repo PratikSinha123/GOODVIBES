@@ -11,7 +11,7 @@ export default function HighlightsStrip() {
     {
       icon: ShieldCheck,
       title: '24x7 Security',
-      desc: 'CCTV & warden surveillance',
+      desc: 'CCTV & security monitoring',
     },
     {
       icon: Utensils,
