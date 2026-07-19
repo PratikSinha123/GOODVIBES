@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://goodvibesresidency.com/sitemap.xml
+Sitemap: https://goodvibesresidency.in/sitemap.xml

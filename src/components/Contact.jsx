@@ -143,8 +143,8 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="text-gold-accent shrink-0" size={20} />
-                <a href="mailto:info@goodvibesresidency.com" className="font-sans text-sm text-emerald-primary/80 hover:text-gold-accent transition-colors">
-                  info@goodvibesresidency.com
+                <a href="mailto:info@goodvibesresidency.in" className="font-sans text-sm text-emerald-primary/80 hover:text-gold-accent transition-colors">
+                  info@goodvibesresidency.in
                 </a>
               </div>
             </div>

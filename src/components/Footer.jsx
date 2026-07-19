@@ -83,8 +83,8 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-gold-accent shrink-0" />
-              <a href="mailto:info@goodvibesresidency.com" className="font-sans text-sm hover:text-gold-accent transition-colors">
-                info@goodvibesresidency.com
+              <a href="mailto:info@goodvibesresidency.in" className="font-sans text-sm hover:text-gold-accent transition-colors">
+                info@goodvibesresidency.in
               </a>
             </li>
           </ul>
