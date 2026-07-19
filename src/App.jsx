@@ -22,23 +22,10 @@ function App() {
       <main className="flex-grow">
         <Hero />
         <HighlightsStrip />
-        
-        {/* We add reveal-on-scroll to animate entire sections or their items */}
-        <div className="reveal-on-scroll">
-          <Amenities />
-        </div>
-        
-        <div className="reveal-on-scroll">
-          <Gallery />
-        </div>
-        
-        <div className="reveal-on-scroll">
-          <Location />
-        </div>
-        
-        <div className="reveal-on-scroll">
-          <Contact />
-        </div>
+        <Amenities />
+        <Gallery />
+        <Location />
+        <Contact />
       </main>
 
       {/* Corporate footer */}
